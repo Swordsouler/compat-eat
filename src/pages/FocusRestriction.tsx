@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, IconButton, Typography, Button, ToggleButton as MuiToggleButton, styled } from "@mui/material";
+import { AppBar, Toolbar, IconButton, Typography, ToggleButton as MuiToggleButton, styled } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useEffect, useState } from "react";
@@ -41,7 +41,7 @@ export const FocusRestriction = () => {
     console.log(food);
     return (
         <>
-            <AppBar position="static">
+            <AppBar position="fixed">
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -58,22 +58,25 @@ export const FocusRestriction = () => {
                 </Toolbar>
             </AppBar>
 
-            <h2>{food?.name}</h2>
-            <img src={food?.image} alt={food?.name} id="restriction__focus__image"/>
-            <p style={{paddingLeft: "30px", paddingRight: "30px"}}>This product is not compatible with some of your restriction(s):</p>
-            <div id="filters" style={{justifyContent: "center", marginTop: 0}}>
-                {filters.map((filter, id) => (
-                    <ToggleButton 
-                        key={filter.name}
-                        value={filter.name}
-                        selected={true}
-                        selectedcolor={filter.color}
-                        disabled={true}>
-                        {filter.name}
-                    </ToggleButton>
-                ))}
+            <div style={{paddingTop: "56px", display: "flex", flexDirection: "column"}}>
+                
+                <h2>{food?.name}</h2>
+                <img src={food?.image} alt={food?.name} id="restriction__focus__image"/>
+                <p style={{paddingLeft: "30px", paddingRight: "30px"}}>This product is not compatible with some of your restriction(s):</p>
+                <div id="filters" style={{justifyContent: "center", marginTop: 0}}>
+                    {filters.map((filter, id) => (
+                        <ToggleButton 
+                            key={filter.name}
+                            value={filter.name}
+                            selected={true}
+                            selectedcolor={filter.color}
+                            disabled={true}>
+                            {filter.name}
+                        </ToggleButton>
+                    ))}
+                </div>
+                <img src={require("../templates/detail.png")} alt="Detail"/>
             </div>
-            <img src={require("../templates/detail.png")}/>
         </>
     );
 };

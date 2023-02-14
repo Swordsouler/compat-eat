@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import CheckIcon from '@mui/icons-material/Check';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Filter, Food, initialFilters, sampleData } from '../App';
 
 export const Restrictions = () => {

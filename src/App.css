@@ -158,3 +158,27 @@ h2 {
     align-self: center;
     justify-self: center;
 }
+
+#form__button__create {
+    border-radius: 50px;
+}
+
+#form__button__cancel {
+    background-color: #FFFFFF;
+    color: #6750a4;
+    box-shadow: none;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+#form__button {
+    position: relative;
+    margin: 0;
+    font-weight: bold;
+    font-size: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

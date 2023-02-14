@@ -109,7 +109,9 @@ export type Filter = {
     color: string;
 }
 
-export const initialFilters: Filter[] = [
+const loadedFilters = localStorage.getItem("filterGroups");
+
+export const initialFilters: Filter[] = loadedFilters !== null ? JSON.parse(loadedFilters) : [
     {
         name: "Vegan",
         selected: true,
@@ -133,7 +135,9 @@ export type Food = {
     filters: string[];
 }
 
-export const sampleData: Food[] = [
+const loadedFoods = localStorage.getItem("foods");
+
+export const sampleData: Food[] = loadedFoods !== null ? JSON.parse(loadedFoods) : [
     {
         name: "Banana",
         image: "https://media.istockphoto.com/id/1400057530/photo/bananas-isolated.jpg?b=1&s=170667a&w=0&k=20&c=uiSdjIQkTr7S4gEdW_oB_5zfFYhpfe0LP-CryQl49w4=",
