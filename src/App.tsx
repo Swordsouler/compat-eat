@@ -77,7 +77,7 @@ const Navigations = () => {
         <footer>
             <BottomNavigation
                 id='bottom-nav'
-                style={{backgroundColor: "#f3edf7"}}
+                style={{backgroundColor: "#f3edf7", height: "56px"}}
                 showLabels
                 value={value}
                 onChange={(event, newValue) => {

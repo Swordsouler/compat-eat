@@ -18,7 +18,10 @@ export const ARScan = () => {
                 id="webcam"
                 audio={false}
                 ref={webcamRef}
-                screenshotFormat="image/jpeg"/>
+                screenshotFormat="image/jpeg"
+                videoConstraints={{
+                    facingMode: "environment"
+                }}/>
             <span id="picture__container">
                 <Button variant="contained" color='primary' id="picture__button"><LocalSeeIcon fontSize='large'/></Button>
             </span>
