@@ -182,3 +182,14 @@ h2 {
     align-items: flex-end;
     justify-content: flex-end;
 }
+
+#modal__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    width: 700px;
+    padding: 20px;
+}
